@@ -34,7 +34,7 @@ def solve_knapsack_bb(df_knapsack, W_CAPACITY):
     Resolve o Problema da Mochila 0-1 usando Branch and Bound com Busca em Profundidade (Pilha).
     """
     
-    print(f"Iniciando Solver Branch and Bound...")
+    print("Iniciando Solver Branch and Bound...")
     print(f"Capacidade (W): {W_CAPACITY:.2f}")
     
     # --- 1. Preparação dos Itens ---

@@ -1,7 +1,5 @@
 import pandas as pd
 import os
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Importações do projeto
 from src.data_processing import carregar_e_limpar_dados
