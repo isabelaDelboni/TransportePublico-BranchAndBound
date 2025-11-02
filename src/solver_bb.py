@@ -1,7 +1,7 @@
 import time
 from collections import namedtuple
 
-# Usamos um namedtuple para facilitar a leitura do código
+# Namedtuple para facilitar a leitura do código
 Item = namedtuple('Item', ['name', 'value', 'weight', 'ratio'])
 
 def calculate_bound(items, W, n, level, current_weight, current_value):
@@ -75,7 +75,7 @@ def solve_knapsack_bb(df_knapsack, W_CAPACITY):
         nodes_expanded += 1
         max_depth_reached = max(max_depth_reached, level)
 
-        # --- Caso Base: Chegamos ao fim da árvore (folha) ---
+        # --- Caso Base: Fim da árvore (folha) ---
         if level == n:
             if current_value > max_value:
                 max_value = current_value

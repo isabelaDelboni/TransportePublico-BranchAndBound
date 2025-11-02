@@ -5,7 +5,7 @@ import os
 from src.data_processing import carregar_e_limpar_dados
 from src.solver_bb import solve_knapsack_bb
 
-# --- 1. PROCESSAMENTO DE DADOS (Seu código original) ---
+# --- 1. PROCESSAMENTO DE DADOS ---
 print("--- 1. PROCESSAMENTO INICIAL ---")
 pasta_raw = r".\data\raw"
 pasta_processed = r".\data\processed"
@@ -14,10 +14,6 @@ dados = carregar_e_limpar_dados(pasta_raw, pasta_processed)
 # --- 1.4 ANÁLISE EXPLORATÓRIA (EDA) E PREPARAÇÃO ---
 print("\n--- 1.4 ANÁLISE EXPLORATÓRIA (EDA) ---")
 
-# (Aqui entra todo o código de EDA que gerei para você na resposta anterior)
-# ... (info, describe, dropna, filtragem por ano, etc.) ...
-# ...
-# Supondo que o código anterior foi executado e salvou o .csv:
 print("Carregando dados preparados para o Knapsack...")
 caminho_knapsack_data = os.path.join(pasta_processed, 'knapsack_data.csv')
 
@@ -34,7 +30,7 @@ print(f"Dados do Knapsack carregados: {len(df_knapsack)} estações (itens).")
 print("\n--- 3. IMPLEMENTAÇÃO DO BRANCH AND BOUND ---")
 
 # Definição do Orçamento (Capacidade W)
-# Vamos definir um orçamento hipotético, ex: 20% do "custo" (Peso) total
+# Definir um orçamento hipotético, ex: 20% do "custo" (Peso) total
 total_weight_available = df_knapsack['Peso'].sum()
 W_CAPACITY = total_weight_available * 0.20 
 
